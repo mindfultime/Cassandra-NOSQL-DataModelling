@@ -116,10 +116,11 @@ def main():
 
     # defining columns to be used in for each table in the final dataframe
     music_cols = ["sessionId", "itemInSession", "artist", "song", "length"]
-    artist_cols = ["artist", "song", "itemInSession", "firstName", "lastName", "userId", "sessionId"]
-    user_cols = ["userId", "sessionId", "itemInSession", "artist", "song", "firstName", "lastName"]
+    artist_cols = ["userId", "sessionId", "itemInSession", "artist", "song", "firstName", "lastName"]
+    user_cols = ["song", "userId", "sessionId", "itemInSession", "artist", "firstName", "lastName"]
 
     # inserting data into database
+    ["song", "userId", "sessionId", "itemInSession", "artist", "firstName", "lastName"]
     insert_data(event_dataframe, "music", music_cols, session)
     insert_data(event_dataframe, "artist", artist_cols, session)
     insert_data(event_dataframe, "user", user_cols, session)
