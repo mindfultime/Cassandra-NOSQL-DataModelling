@@ -36,6 +36,9 @@ event_data/2018-11-08-events.csv
 event_data/2018-11-09-events.csv
 ```
 
+Sample View of CSV ![Event Data CSV](https://github.com/mindfultime/Cassandra-DataModelling/blob/master/event_datafile_image.jpg "Event Data CSV")
+
+
 `Information taken from Udacity Nano degree Programme`
 
 ### CQL Scripts:
