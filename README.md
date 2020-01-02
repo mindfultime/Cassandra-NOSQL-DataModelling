@@ -28,7 +28,7 @@ For the files to run locally, [Java SE Runtime Environment](https://www.oracle.c
 
 ## File Info
 ### Data Files:
-#### Song_data
+#### Event Data
 Files are arranged in CSV. Example of one dataset: `event_data` is shown below. The directory of CSV files partitioned by date. Here are examples of filepaths to two files in the dataset:
 
 ```CSV
@@ -40,7 +40,8 @@ Sample View of CSV ![Event Data CSV](https://github.com/mindfultime/Cassandra-Da
 
 
 `Information taken from Udacity Nano degree Programme`
-
+### Data Modelling Info
+[DataModellingInfo.md](https://github.com/mindfultime/Cassandra-DataModelling/blob/master/DataModellingInfo.md "Data Modelling Info") provides detailed explaination as to why the tables were created based on the query provided.
 ### CQL Scripts:
 1. cql_statements: All the Apache Cassandra statements `cassandraql` for Creating, Dropping, Inserting, and Selection. Along with data dictonary has been created to help expand the cql in the future.
 
