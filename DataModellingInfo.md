@@ -22,8 +22,7 @@ Since the `select` statement has artist,song,length, sessionId, and itemInSessio
 
 `CREATE STATEMENT`
 ```cassandraql
-CREATE TABLE IF NOT EXISTS music_library
-            (sessionId int, itemInSession int, artist text, song text, length float, PRIMARY KEY ((sessionId,itemInSession),artist))
+CREATE TABLE IF NOT EXISTS music_library (sessionId int, itemInSession int, artist text, song text, length float, PRIMARY KEY ((sessionId,itemInSession),artist))
 ```
 `INSERT STATEMENT`
 ```cassandraql
