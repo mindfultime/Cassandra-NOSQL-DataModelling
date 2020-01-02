@@ -8,11 +8,11 @@ In order to carry out the analytics a database with Apache Cassandra must be cre
 ##### Create queries to ask the following three questions of the data
 1. Give me the artist, song title and song's length in the music app history that was heard during  sessionId = 338, and itemInSession  = 4
 ```cassandraql
-SELECT * FROM music_library WHERE sessionid =338 and itemInSession=4;
+SELECT artist, song, length FROM music_library WHERE sessionid =338 and itemInSession=4;
 ```
 2. Give me only the following: name of artist, song (sorted by itemInSession) and user (first and last name) for userid = 10, sessionid = 182
 ```cassandraql
-SELECT * FROM artist_library WHERE userid = 10 and sessionid = 182;
+SELECT itemInSession, artist, song, firstName, LastName FROM artist_library WHERE userid = 10 and sessionid = 182;
 ```
 3. Give me every user name (first and last) in my music app history who listened to the song 'All Hands Against His Own'
 
