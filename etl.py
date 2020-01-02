@@ -120,7 +120,6 @@ def main():
     user_cols = ["song", "userId", "sessionId", "itemInSession", "artist", "firstName", "lastName"]
 
     # inserting data into database
-    ["song", "userId", "sessionId", "itemInSession", "artist", "firstName", "lastName"]
     insert_data(event_dataframe, "music", music_cols, session)
     insert_data(event_dataframe, "artist", artist_cols, session)
     insert_data(event_dataframe, "user", user_cols, session)
