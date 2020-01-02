@@ -1,4 +1,4 @@
-#Sparkifydb Data Modelling Information
+# Sparkifydb Data Modelling Information
 
 ## Query 1:  
 Give me the artist, song title and song's length in the music app history that was heard during sessionId = 338, and itemInSession = 4
