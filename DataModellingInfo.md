@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS music_library (sessionId int, itemInSession int, arti
 ```cassandraql
 INSERT INTO music_library (sessionId, itemInSession, artist, song, length) VALUES (%s,%s,%s,%s,%s)
 ```
-
+# 
 ## Query 2:  
 Give me only the following: name of artist, song (sorted by itemInSession) and user (first and last name) for userid = 10, sessionid = 182
 
@@ -58,11 +58,11 @@ CREATE TABLE IF NOT EXISTS artist_library (userId float , sessionId int, itemInS
 ```cassandraql
 INSERT INTO artist_library (userId, sessionId, itemInSession, artist, song, firstName, lastName) VALUES (%s,%s,%s,%s,%s,%s,%s)
 ```
-
+# 
 ## Query 3:  
 Give me every user name (first and last) in my music app history who listened to the song 'All Hands Against His Own'
 
-### Modelling Database based on Query 2:
+### Modelling Database based on Query 3:
 This query excepts users first name and last name to be queried based on the song.
 
 The excepted output is users first name and last name. 
