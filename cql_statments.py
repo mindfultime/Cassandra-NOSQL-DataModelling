@@ -14,7 +14,7 @@ during sessionId = 338, and itemInSession = 4
 
 create_music = """CREATE TABLE IF NOT EXISTS music_library
                 (sessionId int, itemInSession int, artist text, song text, length float, 
-                    PRIMARY KEY (sessionId,itemInSession,artist))"""
+                    PRIMARY KEY ((sessionId,itemInSession),artist));"""
 
 """
 Query Info for Artists: Give me only the following: name of artist, song (sorted by itemInSession) 
@@ -30,20 +30,24 @@ create_artist = """CREATE TABLE IF NOT EXISTS artist_library
 song 'All Hands Against His Own' 
 """
 create_user = """CREATE TABLE IF NOT EXISTS user_library
-                (song text, userId float , sessionId int, itemInSession int, artist text, firstName text, lastName text, 
+                (song text, userId float , sessionId int, itemInSession int, artist text, firstName text, 
+                lastName text, 
                     PRIMARY KEY (song, userId));"""
 
 # insert statements
 insert_music = "INSERT INTO music_library (sessionId, itemInSession, artist, song, length) VALUES (%s,%s,%s,%s,%s)"
 
-insert_artist = "INSERT INTO artist_library (userId, sessionId, itemInSession, artist, song, firstName, lastName) VALUES (%s,%s,%s,%s,%s,%s,%s)"
+insert_artist = """INSERT INTO artist_library (userId, sessionId, itemInSession, artist, song, firstName, lastName)
+                VALUES (%s,%s,%s,%s,%s,%s,%s)"""
 
-insert_user = "INSERT INTO user_library (song, userId, sessionId, itemInSession, artist, firstName, lastName) VALUES (%s,%s,%s,%s,%s,%s,%s)"
+insert_user = """INSERT INTO user_library (song, userId, sessionId, itemInSession, artist, firstName, lastName)
+               VALUES (%s,%s,%s,%s,%s,%s,%s)"""
 
 # select statements
 select_music = "SELECT artist, song, length FROM music_library WHERE sessionid =338 and itemInSession=4;"
 
-select_artist = "SELECT itemInSession, artist, song, firstName, LastName FROM artist_library WHERE userid = 10 and sessionid = 182;"
+select_artist = """SELECT itemInSession, artist, song, firstName, LastName FROM artist_library WHERE userid = 10
+                and sessionid = 182;"""
 
 select_user = "SELECT firstName,lastName FROM user_library WHERE song='All Hands Against His Own';"
 
